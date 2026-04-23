@@ -48,10 +48,10 @@
 **Concern:** DNS Spoofing/Poisoning. An attacker could intercept a DNS request and return a malicious TXT record containing their own wallet address, making a forged document appear "verified."
 
 #### Mitigation Strategies (Security Specialist Input)
-To harden Granite Bridge against DNS-based attacks, we will implement a multi-layered defense:
+To harden Granite Ridge against DNS-based attacks, we will implement a multi-layered defense:
 
 * **1. Mandatory DNSSEC Validation:**
-    The Granite Bridge backend (or client-side resolver) must strictly require **DNSSEC** (Domain Name System Security Extensions). If the records are not cryptographically signed by the domain owner, the verification should be flagged as "Low Confidence" or blocked.
+    The backend (or client-side resolver) must strictly require **DNSSEC** (Domain Name System Security Extensions). If the records are not cryptographically signed by the domain owner, the verification should be flagged as "Low Confidence" or blocked.
 * **2. The "On-Chain Registry" Fallback:**
     Instead of relying solely on DNS, maintain a "Verified Signers" smart contract on Sui. DNS acts as a pointer, but the system cross-references the $wallet \rightarrow domain$ mapping against a registry managed by a consortium or trusted DAO.
 * **3. Multi-Path Discovery:**
