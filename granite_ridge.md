@@ -68,4 +68,10 @@ To harden Granite Ridge against DNS-based attacks, we will implement a multi-lay
 
 ---
 
+### 6. Project Milestones
+
+- M1: System core functionality of e-signature monitoring and on chain attestation (no front end)
+- M2: TBD
+- M3: TBD
+- 
 > **Technical Note:** All document hashes are generated using the $SHA\text{-}256$ algorithm to ensure compatibility between Zoho Sign's output and the Sui transaction data.
