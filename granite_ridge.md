@@ -1,6 +1,6 @@
 ## Product Requirements Document: Granite Ridge - Core
 
-**Granite Ridge** is a public-facing verification gateway that enables anyone to validate the authenticity of a digital document by cross-referencing it against decentralized attestation records on the Sui blockchain.
+**Granite Ridge** is a public-facing verification gateway that enables anyone possessing a file to validate the authenticity and prevenance of that file by cross-referencing it against decentralized attestation records. The core mechanism involves use of a company's DNS records to link the company's internet identity (eg "attester.google.com") to a wallet address on a public blockchain. 
 
 ---
 
@@ -15,11 +15,11 @@
 
 | Stage | Action | Technology |
 | :--- | :--- | :--- |
-| **1. Execution** | Document is signed by parties. | Zoho Sign (or similar) |
+| **1. Execution** | Document is electronically signed by parties. | eg Zoho Sign, Docusign (or similar) |
 | **2. Processing** | Workflow engine triggers on completion. | n8n |
 | **3. Storage** | Document is stored as a blob. | Walrus (Decentralized Storage) |
-| **4. Attestation** | Transaction recorded: `(timestamp, attester_wallet, doc_hash)`. | Sui Blockchain |
-| **5. Discovery** | Public user identifies the signer's wallet via DNS. | DNS TXT Records |
+| **4. Attestation** | Transaction recorded: `(timestamp, attester_wallet, doc_hash)`. | Sui blockchain object|
+| **5. Discovery** | Public user identifies the attesting signer's wallet via DNS lookup. | DNS TXT Records |
 
 ---
 
