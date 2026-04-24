@@ -1,4 +1,4 @@
-## Product Requirements Document: Granite Ridge - Core
+## Product Requirements Document: Granite Ridge
 
 **Granite Ridge** is a public-facing verification gateway that enables anyone possessing a file to validate the authenticity and prevenance of that file by cross-referencing it against decentralized attestation records. The core mechanism involves use of a company's DNS records to link the company's internet identity (eg "attester.google.com") to a wallet address on a public blockchain. 
 
